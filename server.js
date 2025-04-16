@@ -6,7 +6,9 @@ const axios = require("axios");
 
 const app = express();
 const PORT = 3001;
-app.use(cors());
+app.use(cors({
+  origin: "https://famosos-aniversariantes.vercel.app"
+}));
 app.use(express.json());
 
 // // Função para buscar aniversariantes no Wikipedia
